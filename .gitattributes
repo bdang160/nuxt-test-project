@@ -1,0 +1,11 @@
+# Normalize all text files to LF on commit
+* text=auto eol=lf
+
+# Optional: be explicit for code files
+*.js     text eol=lf
+*.ts     text eol=lf
+*.vue    text eol=lf
+*.json   text eol=lf
+*.css    text eol=lf
+*.scss   text eol=lf
+*.md     text eol=lf
