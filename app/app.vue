@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <NuxtPage />
 </template>
 
 <style src="@/assets/css/tailwind.css"></style>
