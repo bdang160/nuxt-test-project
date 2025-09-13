@@ -1,8 +1,11 @@
 <template>
-  <div class="p-8">
-    <h2 class="text-2xl font-semibold mb-2">About Page</h2>
-    <p>This is a simple Nuxt Hello World project with an About page.</p>
-    <NuxtLink to="/" class="text-blue-500 hover:underline mt-4 block">Back to Home</NuxtLink>
+  <div class="flex flex-col items-center justify-center min-h-screen bg-white text-gray-800">
+    <h1 class="text-3xl font-bold">About Page</h1>
+    <p class="mt-2">This is another route in your Nuxt app 🎉</p>
+
+    <NuxtLink to="/" class="mt-6 underline text-indigo-600 hover:text-indigo-800">
+      ← Back Home
+    </NuxtLink>
   </div>
 </template>
 
