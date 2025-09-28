@@ -14,8 +14,8 @@
       <div v-if="userStore.loading">Loading...</div>
       <div v-if="userStore.error" class="text-red-500">{{ userStore.error }}</div>
 
-      <template>
-        <div v-if="userStore.users" class="mt-4">
+      <template v-if="userStore.users" >
+        <div class="mt-4">
           <v-data-table
             :headers="headers"
             :items="items"
