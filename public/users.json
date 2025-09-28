@@ -1,6 +1,25 @@
 {
-  "name": "Alice Johnson",
-  "location": "New York, USA",
-  "dob": "1990-05-15",
-  "email": "alice@example.com"
+  "data": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "location": "Los Angeles, USA",
+      "dob": "1985-10-20",
+      "email": "jdoe@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "location": "New York, USA",
+      "dob": "1990-05-15",
+      "email": "jsmith@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Alice Johnson",
+      "location": "Chicago, USA",
+      "dob": "1978-12-30",
+      "email": "ajohn@gmail.com"
+    }
+  ]
 }

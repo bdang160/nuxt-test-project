@@ -5,7 +5,7 @@
 
     <div class="p-6">
       <button 
-        @click="userStore.fetchUser"
+        @click="userStore.fetchUsers"
         class="bg-green-600 text-white px-4 py-2 rounded"
       >
         Load User Info
@@ -14,12 +14,17 @@
       <div v-if="userStore.loading">Loading...</div>
       <div v-if="userStore.error" class="text-red-500">{{ userStore.error }}</div>
 
-      <div v-if="userStore.user" class="mt-4 space-y-2">
-        <h2 class="text-xl font-bold">{{ userStore.user.name }}</h2>
-        <p><strong>Location:</strong> {{ userStore.user.location }}</p>
-        <p><strong>DOB:</strong> {{ userStore.user.dob }}</p>
-        <p><strong>Email:</strong> {{ userStore.user.email }}</p>
-      </div>
+      <template>
+        <div v-if="userStore.users" class="mt-4">
+          <v-data-table
+            :headers="headers"
+            :items="items"
+            class="elevation-1"
+            hide-default-footer
+          />
+        </div>
+      </template>
+
     </div>
     <NuxtLink to="/" class="mt-6 underline text-indigo-600 hover:text-indigo-800">
       ← Back Home
@@ -29,6 +34,23 @@
 
 <script setup>
 import { useUserStore } from '@/stores/userStore'
+import { computed } from 'vue'
 
 const userStore = useUserStore()
+
+// Define the column headers
+const headers = [
+  { title: 'ID', key: 'id' },
+  { title: 'Name', key: 'name' },
+  { title: 'Location', key: 'location' },
+  { title: 'DOB', key: 'dob' },
+  { title: 'Email', key: 'email' },
+]
+
+console.log(userStore.users)
+// Put the user object in an array so the table can treat it as rows
+const items = computed(() =>
+  userStore.users ? userStore.users : []
+)
+
 </script>
