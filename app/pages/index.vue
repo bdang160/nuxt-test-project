@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800">
+  <main class="flex flex-col items-start justify-start min-h-screen bg-gray-100 text-gray-800 pl-6 pt-6">
     <h1 class="text-4xl font-bold mb-4">
       Hello Nuxt 👋
     </h1>

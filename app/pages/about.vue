@@ -1,16 +1,9 @@
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen bg-white text-gray-800">
+  <div class="flex flex-col items-start justify-start min-h-screen bg-gray-100 text-gray-800 pl-6 pt-6">
     <h1 class="text-3xl font-bold">About Page</h1>
     <p class="mt-2">This is another route in your Nuxt app 🎉</p>
 
     <div class="p-6">
-      <button 
-        @click="userStore.fetchUsers"
-        class="bg-green-600 text-white px-4 py-2 rounded"
-      >
-        Load User Info
-      </button>
-
       <div v-if="userStore.loading">Loading...</div>
       <div v-if="userStore.error" class="text-red-500">{{ userStore.error }}</div>
 
@@ -38,6 +31,8 @@ import { computed } from 'vue'
 
 const userStore = useUserStore()
 
+userStore.fetchUsers()
+
 // Define the column headers
 const headers = [
   { title: 'ID', key: 'id' },
@@ -47,7 +42,6 @@ const headers = [
   { title: 'Email', key: 'email' },
 ]
 
-console.log(userStore.users)
 // Put the user object in an array so the table can treat it as rows
 const items = computed(() =>
   userStore.users ? userStore.users : []
