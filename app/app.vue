@@ -9,6 +9,7 @@
       <NuxtLink to="/" class="hover:text-gray-300">Home</NuxtLink>
       <NuxtLink to="/about" class="hover:text-gray-300">About</NuxtLink>
       <NuxtLink to="/databoxflex" class="hover:text-gray-300">DataBox Flex</NuxtLink>
+      <NuxtLink to="/textsection" class="hover:text-gray-300">Text Section</NuxtLink>
     </nav>
 
     <!-- Page Content -->
