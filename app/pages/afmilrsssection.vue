@@ -14,7 +14,7 @@ const { data: feed, pending, error } = await useFetch('/af_mil_rss.xml', {
     <div v-if="pending">Loading...</div>
     <div v-else-if="error">Failed to load feed</div>
 
-    <ul v-else>
+    <ul v-else-if="feed">
       <li v-for="item in feed.items" :key="item.guid || item.link">
         <a
           class="flex items-center gap-2 text-2xl font-bold hover:underline"
