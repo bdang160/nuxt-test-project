@@ -19,25 +19,7 @@
       </template>
 
     </div>
-    <div class="p-8 space-y-4">
-      <DataBox
-        title="User Info"
-        body="This box contains user information."
-        boxColor="#e0f2fe"
-        titleColor="#0c4a6e"
-        bodyColor="#1e293b"
-      />
 
-      <DataBox title="Custom Content" bodyColor="purple">
-        <strong>This is slot content.</strong>  
-        It replaces the `body` prop text.
-      </DataBox>
-
-      <DataBox title="Default Colors">
-        Text for Default Colors and slot
-      </DataBox>
-    </div>
-    
     <NuxtLink to="/" class="mt-6 underline text-indigo-600 hover:text-indigo-800">
       ← Back Home
     </NuxtLink>
